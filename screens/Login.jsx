@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
   },
 
   controls: {
+    width: "90%",
     flex: 1,
   },
 

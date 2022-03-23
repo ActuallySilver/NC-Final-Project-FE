@@ -1,8 +1,15 @@
 import React from "react";
-import { Pressable, StyleSheet } from "react-native";
-import { ImageBackground, Text, Image, View } from "react-native-web";
+import {
+  Pressable,
+  StyleSheet,
+  ImageBackground,
+  Text,
+  Image,
+  View,
+} from "react-native";
+
 import { useAuthentication } from "../utils/hooks/useAuthentication";
-import * as splashMainBackground from "../assets/background.png";
+// import * as splashMainBackground from "../assets/background.png";
 import * as playButton from "../assets/playButton.png";
 
 const PlayButton = ({ navigation }) => {
@@ -12,14 +19,17 @@ const PlayButton = ({ navigation }) => {
       <ImageBackground
         style={styles.splashBackground}
         resizeMode="cover"
-        source={splashMainBackground}
+        source={require("../assets/background.png")}
       >
         <Pressable
           onPress={() => {
             navigation.navigate("Route Logic");
           }}
         >
-          <Image source={playButton} style={styles.playButton}></Image>
+          <Image
+            source={require("../assets/playButton.png")}
+            style={styles.playButton}
+          ></Image>
         </Pressable>
       </ImageBackground>
     </View>
@@ -37,7 +47,6 @@ const styles = StyleSheet.create({
   },
 
   playButton: {
-    flex: 1,
     height: 200,
     width: 200,
     marginLeft: 30,

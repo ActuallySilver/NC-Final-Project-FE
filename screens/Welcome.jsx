@@ -1,7 +1,7 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { StackScreenProps } from "@react-navigation/stack";
-import { Button } from "react-native-elements";
+// import { StackScreenProps } from "@react-navigation/stack";
+// import { Button } from "react-native-elements";
 
 const Welcome = ({ navigation }) => {
   return (
